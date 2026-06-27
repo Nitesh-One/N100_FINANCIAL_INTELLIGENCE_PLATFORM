@@ -1,0 +1,18 @@
+Initial Validation Report (ran against db/nifty100_validator.db)
+
+VAL-01: PASS - All expected tables exist
+VAL-02: PASS - Every table has a PRIMARY KEY
+VAL-03: PASS - Foreign key relationships appear to reference companies
+VAL-04: PASS - PRAGMA foreign_keys is enabled
+VAL-05: PASS - Column structures match expected declarations
+VAL-06: PASS - All tables are empty
+VAL-07: PASS - Schema executed successfully
+VAL-08: FAIL - FOREIGN KEY constraint failed
+VAL-09: PASS - Foreign key constraints are enforced
+VAL-10: PASS - NOT NULL constraints enforce non-null values
+VAL-11: PASS - UNIQUE constraint on ticker is enforced
+VAL-12: PASS - Declared column types are standard INTEGER/REAL/TEXT/BLOB or empty
+VAL-13: PASS - Found expected number of tables: 11
+VAL-14: PASS - Foreign key relationships appear to reference companies
+VAL-15: PASS - Connected successfully to db/nifty100_validator.db
+VAL-16: PASS - Schema integrity checks passed

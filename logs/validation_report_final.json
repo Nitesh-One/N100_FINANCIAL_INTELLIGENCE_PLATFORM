@@ -1,0 +1,18 @@
+{
+  "VAL-01": { "status": "PASS", "message": "All expected tables exist" },
+  "VAL-02": { "status": "PASS", "message": "Every table has a PRIMARY KEY" },
+  "VAL-03": { "status": "PASS", "message": "Foreign key relationships appear to reference companies" },
+  "VAL-04": { "status": "PASS", "message": "PRAGMA foreign_keys is enabled" },
+  "VAL-05": { "status": "PASS", "message": "Column structures match expected declarations" },
+  "VAL-06": { "status": "PASS", "message": "All tables are empty" },
+  "VAL-07": { "status": "PASS", "message": "Schema executed successfully" },
+  "VAL-08": { "status": "PASS", "message": "Primary key constraints reject duplicates as expected" },
+  "VAL-09": { "status": "PASS", "message": "Foreign key constraints are enforced" },
+  "VAL-10": { "status": "PASS", "message": "NOT NULL constraints enforce non-null values" },
+  "VAL-11": { "status": "PASS", "message": "UNIQUE constraint on ticker is enforced" },
+  "VAL-12": { "status": "PASS", "message": "Declared column types are standard INTEGER/REAL/TEXT/BLOB or empty" },
+  "VAL-13": { "status": "PASS", "message": "Found expected number of tables: 11" },
+  "VAL-14": { "status": "PASS", "message": "Foreign key relationships appear to reference companies" },
+  "VAL-15": { "status": "PASS", "message": "Connected successfully to :memory:" },
+  "VAL-16": { "status": "PASS", "message": "Schema integrity checks passed" }
+}

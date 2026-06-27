@@ -29,3 +29,15 @@ for file in files:
         print(f"{file}: {df.shape}")
     except Exception as e:
         print(f"{file}: ERROR -> {e}")
+
+
+# Run database schema and constraint validations
+try:
+    from src.etl.db_validator import run_all, print_report
+
+    print("\nRunning DB schema validations...")
+    # Use an in-memory DB for validations to avoid persistent test data
+    results = run_all("db/schema.sql", ":memory:")
+    print_report(results)
+except Exception as e:
+    print(f"DB validation failed to run: {e}")
