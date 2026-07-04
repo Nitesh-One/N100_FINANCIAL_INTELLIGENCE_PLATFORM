@@ -17,3 +17,5 @@
 2026-06-27 12:12:12.102 | INFO     | __main__:<module>:3 - Project Started
 2026-06-27 12:12:26.068 | INFO     | src.logger:<module>:8 - Logger initialized
 2026-06-27 12:12:26.069 | INFO     | __main__:<module>:3 - Project Started
+2026-07-04 10:22:01.544 | INFO     | src.logger:<module>:8 - Logger initialized
+2026-07-04 10:22:01.545 | INFO     | __main__:<module>:3 - Project Started

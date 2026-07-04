@@ -30,6 +30,7 @@ EXPECTED_TABLES = [
     "peer_groups",
     "analysis",
     "prosandcons",
+    "sectors",
 ]
 
 
@@ -105,6 +106,7 @@ def foreign_key_validation(conn: sqlite3.Connection) -> Tuple[bool, str]:
             "peer_groups",
             "analysis",
             "prosandcons",
+            "sectors",
         ):
             if not fks:
                 problems.append(f"Table {t} has no foreign keys defined")
@@ -140,6 +142,7 @@ def column_structure_validation(conn: sqlite3.Connection) -> Tuple[bool, str]:
         "peer_groups": {"company_id": "INTEGER", "peer_company_id": "INTEGER"},
         "analysis": {"company_id": "INTEGER"},
         "prosandcons": {"company_id": "INTEGER", "kind": "TEXT", "description": "TEXT"},
+        "sectors": {"company_id": "INTEGER", "broad_sector": "TEXT"},
     }
     problems = []
     for t, cols in expectations.items():

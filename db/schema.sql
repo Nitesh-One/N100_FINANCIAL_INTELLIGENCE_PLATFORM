@@ -12,6 +12,16 @@ CREATE TABLE IF NOT EXISTS companies (
     exchange TEXT
 );
 
+CREATE TABLE IF NOT EXISTS sectors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_id INTEGER NOT NULL,
+    broad_sector TEXT,
+    sub_sector TEXT,
+    index_weight_pct REAL,
+    market_cap_category TEXT,
+    FOREIGN KEY(company_id) REFERENCES companies(company_id) ON DELETE CASCADE ON UPDATE NO ACTION
+);
+
 -- Profit and Loss (income statement) records.
 -- FK: `company_id` -> companies(company_id). Uses ON DELETE CASCADE so related
 -- financial records are removed when a company is removed.
