@@ -55,10 +55,12 @@ def _normalize_ticker(value):
 
 def _normalize_year(value):
     if pd.isna(value):
-        return 0
+        return None
     text = str(value).strip()
-    if not text or text.upper() == "TTM":
-        return 0
+    if not text:
+        return None
+    if text.upper() in {"TTM", "LTM", "N/A", "NA"}:
+        return None
     match = re.search(r"(\d{4})", text)
     if match:
         return int(match.group(1))
@@ -66,7 +68,32 @@ def _normalize_year(value):
     if match:
         year = int(match.group(1))
         return 2000 + year if year < 50 else 1900 + year
-    return 0
+    return None
+
+
+def _coerce_year(value, fallback_year=None):
+    normalized = _normalize_year(value)
+    if normalized is not None:
+        return normalized
+    return fallback_year
+
+
+def _build_company_year_fallbacks(df):
+    fallback_years = {}
+    if "company_id" not in df.columns or "year" not in df.columns:
+        return fallback_years
+    for row in df.itertuples(index=False):
+        company_key = getattr(row, "company_id", None)
+        normalized_company = _normalize_ticker(company_key)
+        if not normalized_company:
+            continue
+        year = _normalize_year(getattr(row, "year", None))
+        if year is None:
+            continue
+        current = fallback_years.get(normalized_company)
+        if current is None or year > current:
+            fallback_years[normalized_company] = year
+    return fallback_years
 
 
 def _coerce_int(value):
@@ -189,6 +216,7 @@ def load_full_dataset(schema_path="db/schema.sql", db_path="db/nifty100.db", aud
         source_rows = len(df)
         loaded_rows = 0
         fk_issues = 0
+        company_year_fallbacks = _build_company_year_fallbacks(df)
 
         for row in df.itertuples(index=False):
             if table_name == "profitandloss":
@@ -197,7 +225,11 @@ def load_full_dataset(schema_path="db/schema.sql", db_path="db/nifty100.db", aud
                 if company_id is None:
                     fk_issues += 1
                     continue
-                fiscal_year = _normalize_year(getattr(row, "year", None))
+                company_key_normalized = _normalize_ticker(company_key)
+                fallback_year = company_year_fallbacks.get(company_key_normalized)
+                fiscal_year = _coerce_year(getattr(row, "year", None), fallback_year)
+                if fiscal_year is None:
+                    fiscal_year = 2024
                 conn.execute(
                     "INSERT INTO profitandloss(company_id, fiscal_year, fiscal_period, sales, operating_profit, net_profit) VALUES (?,?,?,?,?,?)",
                     (
@@ -216,7 +248,11 @@ def load_full_dataset(schema_path="db/schema.sql", db_path="db/nifty100.db", aud
                 if company_id is None:
                     fk_issues += 1
                     continue
-                fiscal_year = _normalize_year(getattr(row, "year", None))
+                company_key_normalized = _normalize_ticker(company_key)
+                fallback_year = company_year_fallbacks.get(company_key_normalized)
+                fiscal_year = _coerce_year(getattr(row, "year", None), fallback_year)
+                if fiscal_year is None:
+                    fiscal_year = 2024
                 conn.execute(
                     "INSERT INTO balancesheet(company_id, fiscal_year, fiscal_period, total_assets, total_liabilities, total_equity) VALUES (?,?,?,?,?,?)",
                     (
@@ -235,7 +271,11 @@ def load_full_dataset(schema_path="db/schema.sql", db_path="db/nifty100.db", aud
                 if company_id is None:
                     fk_issues += 1
                     continue
-                fiscal_year = _normalize_year(getattr(row, "year", None))
+                company_key_normalized = _normalize_ticker(company_key)
+                fallback_year = company_year_fallbacks.get(company_key_normalized)
+                fiscal_year = _coerce_year(getattr(row, "year", None), fallback_year)
+                if fiscal_year is None:
+                    fiscal_year = 2024
                 conn.execute(
                     "INSERT INTO cashflow(company_id, fiscal_year, fiscal_period, operating_cashflow, investing_cashflow, financing_cashflow) VALUES (?,?,?,?,?,?)",
                     (
@@ -254,7 +294,11 @@ def load_full_dataset(schema_path="db/schema.sql", db_path="db/nifty100.db", aud
                 if company_id is None:
                     fk_issues += 1
                     continue
-                fiscal_year = _normalize_year(getattr(row, "year", None))
+                company_key_normalized = _normalize_ticker(company_key)
+                fallback_year = company_year_fallbacks.get(company_key_normalized)
+                fiscal_year = _coerce_year(getattr(row, "year", None), fallback_year)
+                if fiscal_year is None:
+                    fiscal_year = 2024
                 conn.execute(
                     "INSERT INTO financial_ratios(company_id, fiscal_year, pe_ratio, roe, current_ratio, debt_equity) VALUES (?,?,?,?,?,?)",
                     (

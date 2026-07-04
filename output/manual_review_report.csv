@@ -1,0 +1,25 @@
+company_id,company_name,ticker,table,records,start_year,end_year,total_years,status,type,rows
+70.0,Oil & Natural Gas Corpn Ltd,ONGC,profitandloss,13.0,2013.0,2024.0,13.0,PASS,,
+70.0,Oil & Natural Gas Corpn Ltd,ONGC,balancesheet,13.0,2013.0,2024.0,13.0,PASS,,
+70.0,Oil & Natural Gas Corpn Ltd,ONGC,cashflow,12.0,2013.0,2024.0,12.0,PASS,,
+70.0,Oil & Natural Gas Corpn Ltd,ONGC,financial_ratios,12.0,2013.0,2024.0,12.0,PASS,,
+44.0,ICICI Bank Ltd,ICICIBANK,profitandloss,13.0,2013.0,2024.0,13.0,PASS,,
+44.0,ICICI Bank Ltd,ICICIBANK,balancesheet,12.0,2013.0,2024.0,12.0,PASS,,
+44.0,ICICI Bank Ltd,ICICIBANK,cashflow,12.0,2013.0,2024.0,12.0,PASS,,
+44.0,ICICI Bank Ltd,ICICIBANK,financial_ratios,12.0,2013.0,2024.0,12.0,PASS,,
+41.0,Hero MotoCorp Ltd,HEROMOTOCO,profitandloss,12.0,2014.0,2024.0,12.0,PASS,,
+41.0,Hero MotoCorp Ltd,HEROMOTOCO,balancesheet,12.0,2014.0,2024.0,12.0,PASS,,
+41.0,Hero MotoCorp Ltd,HEROMOTOCO,cashflow,11.0,2014.0,2024.0,11.0,PASS,,
+41.0,Hero MotoCorp Ltd,HEROMOTOCO,financial_ratios,11.0,2014.0,2024.0,11.0,PASS,,
+31.0,Dr Reddys Laboratories Ltd,DRREDDY,profitandloss,13.0,2013.0,2024.0,13.0,PASS,,
+31.0,Dr Reddys Laboratories Ltd,DRREDDY,balancesheet,13.0,2013.0,2024.0,13.0,PASS,,
+31.0,Dr Reddys Laboratories Ltd,DRREDDY,cashflow,12.0,2013.0,2024.0,12.0,PASS,,
+31.0,Dr Reddys Laboratories Ltd,DRREDDY,financial_ratios,12.0,2013.0,2024.0,12.0,PASS,,
+48.0,IndusInd Bank Ltd,INDUSINDBK,profitandloss,13.0,2013.0,2024.0,13.0,PASS,,
+48.0,IndusInd Bank Ltd,INDUSINDBK,balancesheet,12.0,2013.0,2024.0,12.0,PASS,,
+48.0,IndusInd Bank Ltd,INDUSINDBK,cashflow,12.0,2013.0,2024.0,12.0,PASS,,
+48.0,IndusInd Bank Ltd,INDUSINDBK,financial_ratios,12.0,2013.0,2024.0,12.0,PASS,,
+,,,profitandloss,,,,,,coverage_issue,"[(55, 3)]"
+,,,balancesheet,,,,,,coverage_issue,"[(55, 3)]"
+,,,cashflow,,,,,,coverage_issue,"[(55, 2)]"
+,,,financial_ratios,,,,,,coverage_issue,"[(55, 2)]"

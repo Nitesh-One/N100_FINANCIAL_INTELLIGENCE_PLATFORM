@@ -34,3 +34,22 @@ def test_full_dataset_load_creates_audit_and_expected_counts(tmp_path):
     assert cur.execute("SELECT COUNT(1) FROM stock_prices").fetchone()[0] >= 5500
 
     conn.close()
+
+
+def test_ttm_years_are_not_loaded_as_zero(tmp_path):
+    schema_path = Path(__file__).resolve().parents[1] / "db" / "schema.sql"
+    db_path = tmp_path / "nifty100.db"
+    audit_path = tmp_path / "load_audit.csv"
+
+    _, conn = load_full_dataset(
+        schema_path=str(schema_path),
+        db_path=str(db_path),
+        audit_path=str(audit_path),
+    )
+
+    cur = conn.cursor()
+    assert cur.execute("SELECT COUNT(1) FROM profitandloss WHERE fiscal_year = 0").fetchone()[0] == 0
+    assert cur.execute("SELECT COUNT(1) FROM balancesheet WHERE fiscal_year = 0").fetchone()[0] == 0
+    assert cur.execute("SELECT COUNT(1) FROM cashflow WHERE fiscal_year = 0").fetchone()[0] == 0
+
+    conn.close()

@@ -1,0 +1,262 @@
+[
+  {
+    "company_id": 58,
+    "company_name": "Kotak Mahindra Bank Ltd",
+    "ticker": "KOTAKBANK",
+    "table": "profitandloss",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 58,
+    "company_name": "Kotak Mahindra Bank Ltd",
+    "ticker": "KOTAKBANK",
+    "table": "balancesheet",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 58,
+    "company_name": "Kotak Mahindra Bank Ltd",
+    "ticker": "KOTAKBANK",
+    "table": "cashflow",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 58,
+    "company_name": "Kotak Mahindra Bank Ltd",
+    "ticker": "KOTAKBANK",
+    "table": "financial_ratios",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 16,
+    "company_name": "Bank of Baroda",
+    "ticker": "BANKBARODA",
+    "table": "profitandloss",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 16,
+    "company_name": "Bank of Baroda",
+    "ticker": "BANKBARODA",
+    "table": "balancesheet",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 16,
+    "company_name": "Bank of Baroda",
+    "ticker": "BANKBARODA",
+    "table": "cashflow",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 16,
+    "company_name": "Bank of Baroda",
+    "ticker": "BANKBARODA",
+    "table": "financial_ratios",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 30,
+    "company_name": "Avenue Supermarts Ltd",
+    "ticker": "DMART",
+    "table": "profitandloss",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 30,
+    "company_name": "Avenue Supermarts Ltd",
+    "ticker": "DMART",
+    "table": "balancesheet",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 30,
+    "company_name": "Avenue Supermarts Ltd",
+    "ticker": "DMART",
+    "table": "cashflow",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 30,
+    "company_name": "Avenue Supermarts Ltd",
+    "ticker": "DMART",
+    "table": "financial_ratios",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 13,
+    "company_name": "Bajaj Finserv Ltd",
+    "ticker": "BAJAJFINSV",
+    "table": "profitandloss",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 13,
+    "company_name": "Bajaj Finserv Ltd",
+    "ticker": "BAJAJFINSV",
+    "table": "balancesheet",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 13,
+    "company_name": "Bajaj Finserv Ltd",
+    "ticker": "BAJAJFINSV",
+    "table": "cashflow",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 13,
+    "company_name": "Bajaj Finserv Ltd",
+    "ticker": "BAJAJFINSV",
+    "table": "financial_ratios",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 49,
+    "company_name": "Infosys Ltd",
+    "ticker": "INFY",
+    "table": "profitandloss",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 49,
+    "company_name": "Infosys Ltd",
+    "ticker": "INFY",
+    "table": "balancesheet",
+    "records": 13,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 13,
+    "status": "PASS"
+  },
+  {
+    "company_id": 49,
+    "company_name": "Infosys Ltd",
+    "ticker": "INFY",
+    "table": "cashflow",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "company_id": 49,
+    "company_name": "Infosys Ltd",
+    "ticker": "INFY",
+    "table": "financial_ratios",
+    "records": 12,
+    "start_year": 2013,
+    "end_year": 2024,
+    "total_years": 12,
+    "status": "PASS"
+  },
+  {
+    "type": "coverage_issue",
+    "table": "profitandloss",
+    "rows": [
+      [
+        55,
+        3
+      ]
+    ]
+  },
+  {
+    "type": "coverage_issue",
+    "table": "balancesheet",
+    "rows": [
+      [
+        55,
+        3
+      ]
+    ]
+  },
+  {
+    "type": "coverage_issue",
+    "table": "cashflow",
+    "rows": [
+      [
+        55,
+        2
+      ]
+    ]
+  },
+  {
+    "type": "coverage_issue",
+    "table": "financial_ratios",
+    "rows": [
+      [
+        55,
+        2
+      ]
+    ]
+  }
+]
